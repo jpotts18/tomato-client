@@ -21,7 +21,7 @@ jobs:
       - name: Install Deps
         run: yarn install 
       - name: Build React App
-        run: yarn install && yarn build
+        run: yarn build
 
       - name: Deploy app build to S3 bucket
         run: aws s3 sync ./build/ s3://jpotts18-tomato --delete
